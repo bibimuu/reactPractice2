@@ -2,6 +2,8 @@ import { useState, useCallback, useMemo, useEffect } from "react";
 import "./styles.css";
 
 import { ChildArea } from "./ChildArea";
+import { InlineStyle } from "./Components/InlineStyle";
+import { CssModules } from "./Components/CssModules";
 
 export default function App() {
   const [text, setText] = useState("");
@@ -23,6 +25,8 @@ export default function App() {
 
   return (
     <>
+      <InlineStyle />
+      <CssModules />
       <input value={text} onChange={changeText} />
       <button onClick={openToggle}>表示</button>
       <ChildArea open={open} onClickClose={onClickClose} />

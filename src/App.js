@@ -5,6 +5,8 @@ import { ChildArea } from "./ChildArea";
 import { InlineStyle } from "./Components/InlineStyle";
 import { CssModules } from "./Components/CssModules";
 import { StyledJSX } from "./Components/StyledJSX";
+import { StyledComponents } from "./Components/StyledComponents";
+import { Emotion } from "./Components/Emotion";
 
 export default function App() {
   const [text, setText] = useState("");
@@ -29,6 +31,8 @@ export default function App() {
       <InlineStyle />
       <CssModules />
       <StyledJSX />
+      <StyledComponents />
+      <Emotion />
       <input value={text} onChange={changeText} />
       <button onClick={openToggle}>表示</button>
       <ChildArea open={open} onClickClose={onClickClose} />
